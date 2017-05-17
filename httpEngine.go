@@ -23,7 +23,7 @@ func startCPUstress(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		fmt.Fprintf(w, "Starting CPU stress on: %s\n", hostname)
 		if envData, ok := os.LookupEnv("SPECIAL_DATA"); ok {
-			fmt.Fprintf(w, "Specail data is set, value is: %s\n", envData)
+			fmt.Fprintf(w, "Special data is set, value is: %s\n", envData)
 		}
 
 		go cpuStress()
